@@ -24,7 +24,7 @@ public class TC001_TNLogin {
 
         cf.clickmyAccount ();
         tnf.createAccount();
-        System.out.println("Test case completed");
+        System.out.println("Test case completed ");
 
     }
 
