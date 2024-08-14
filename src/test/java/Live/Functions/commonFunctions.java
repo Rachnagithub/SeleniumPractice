@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class commonFunctions {
-    public WebDriver driver;
+    public static WebDriver driver;
     public WebDriver initializeDriver(){
         System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\chromedriver.exe");
         driver = new ChromeDriver();
