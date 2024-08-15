@@ -4,6 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.Properties;
+
 public class commonFunctions {
     public static WebDriver driver;
     public WebDriver initializeDriver(){
@@ -25,6 +29,14 @@ public class commonFunctions {
         Thread.sleep(3000);
         driver.findElement(By.linkText("Register")).click();
 
+    }
+
+    public Properties readData(String filename) throws Exception{
+        File file = new File(System.getProperty("user.dir")+"\\src\\test\\java\\Live\\TestData\\"+filename+".properties");
+        FileInputStream fis = new FileInputStream(file);
+        Properties p= new Properties();
+        p.load(fis);
+        return p;
     }
 
     public void quit(){

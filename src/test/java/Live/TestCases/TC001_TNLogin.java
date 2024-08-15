@@ -23,7 +23,7 @@ public class TC001_TNLogin {
     public void tnLogin() throws Exception{
 
         cf.clickmyAccount ();
-        tnf.createAccount();
+        tnf.createAccount("TC001_TNLogin");
         System.out.println("Test case completed ");
 
     }
